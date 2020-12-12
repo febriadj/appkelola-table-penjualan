@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Slabo+27px&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Slabo 27px', sans-serif;
+  font-family: 14px;
+  background-color: #242423;
+  color: #fff;
+}
+#home-page {
+  margin: 50px 100px;
+}
