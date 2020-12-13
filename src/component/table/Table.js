@@ -9,9 +9,9 @@ export default class Table extends Component {
       headerTable: ['No', 'Makanan', 'Deskripsi', 'Harga', 'Action'],
       dataTable: [
         {makanan: 'Nasi Goreng', deskripsi: 'Nasi Goreng Gila Lvl Max', harga: '12.000'},
-        {makanan: 'Ayam Rendang', deskripsi: 'Nasi Goreng Gila Lvl Max', harga: '12.000'},
-        {makanan: 'Gulai Kambing', deskripsi: 'Nasi Goreng Gila Lvl Max', harga: '12.000'},
-        {makanan: 'Sate Ayam', deskripsi: 'Nasi Goreng Gila Lvl Max', harga: '12.000'},
+        {makanan: 'Ayam Rendang', deskripsi: 'Nasi Goreng Gila Lvl Max', harga: '13.000'},
+        {makanan: 'Gulai Kambing', deskripsi: 'Nasi Goreng Gila Lvl Max', harga: '12.500'},
+        {makanan: 'Sate Ayam', deskripsi: 'Nasi Goreng Gila Lvl Max', harga: '11.000'},
       ]
     }
   }
