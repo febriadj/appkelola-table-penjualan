@@ -6,13 +6,13 @@ const AddForm = () => {
     <div id="add-form">
       <form>
         <span>
-          <label for="makanan">Nama Makanan</label>
+          <label>Nama Makanan</label>
           <input type="text" id="makanan" className="input-line" placeholder="Nama Makanan" />
-          <label for="harga">Harga</label>
+          <label>Harga</label>
           <input type="number" id="harga" className="input-line" placeholder="Harga" />
         </span>
         <span>
-          <label for="deskripsi">Deskripsi</label>
+          <label>Deskripsi</label>
           <textarea id="deskripsi" className="input-line" placeholder="Deskripsi"></textarea>
         </span>
       </form>

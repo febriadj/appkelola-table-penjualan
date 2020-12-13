@@ -6,10 +6,37 @@ export default class Table extends Component {
     super(props);
 
     this.state = {
-      makanan: '',
-      deskripsi: '',
-      harga: 0,
+      headerTable: ['No', 'Makanan', 'Deskripsi', 'Harga', 'Action'],
+      dataTable: [
+        {makanan: 'Nasi Goreng', deskripsi: 'Nasi Goreng Gila Lvl Max', harga: '12.000'},
+        {makanan: 'Ayam Rendang', deskripsi: 'Nasi Goreng Gila Lvl Max', harga: '12.000'},
+        {makanan: 'Gulai Kambing', deskripsi: 'Nasi Goreng Gila Lvl Max', harga: '12.000'},
+        {makanan: 'Sate Ayam', deskripsi: 'Nasi Goreng Gila Lvl Max', harga: '12.000'},
+      ]
     }
+  }
+
+  renderHeaderTable = () => {
+    return this.state.headerTable.map( header => {
+      return (
+        <td>{header}</td>
+      )
+    })
+  }
+
+  renderDataTable = () => {
+    return this.state.dataTable.map( (data, index) => {
+      const {makanan, deskripsi, harga} = data;
+      return (
+        <tr>
+          <td>{index + 1}</td>
+          <td>{makanan}</td>
+          <td>{deskripsi}</td>
+          <td>{harga}</td>
+          <td>Null</td>
+        </tr>
+      )
+    })
   }
 
   render() {
@@ -17,27 +44,12 @@ export default class Table extends Component {
       <div id="table">
         <div id="wrap">
           <table>
-            <tr>
-              <td>No</td>
-              <td>Makanan</td>
-              <td>Deskripsi</td>
-              <td>Harga</td>
-              <td>Action</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Nasi Goreng</td>
-              <td>Nasi Goreng Gila Lvl Max</td>
-              <td>12.000</td>
-              <td>Null</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Ayam Rendang</td>
-              <td>Ayam Dengan Bumbu Rendang</td>
-              <td>13.000</td>
-              <td>Null</td>
-            </tr>
+            <thead>
+              {this.renderHeaderTable()}
+            </thead>
+            <tbody>
+              {this.renderDataTable()}
+            </tbody>
           </table>
         </div>
       </div>
