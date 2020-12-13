@@ -12,6 +12,13 @@ body {
   background-color: #242423;
   color: #fff;
 }
+body::-webkit-scrollbar {
+  width: 10px;
+  background: #242423;
+}
+body::-webkit-scrollbar-thumb {
+  background: #4c545e;
+}
 #home-page {
   margin: 50px 100px;
 }

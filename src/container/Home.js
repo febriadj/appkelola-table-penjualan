@@ -3,6 +3,7 @@ import './Home.css';
 import Navbar from '../component/navbar/Navbar';
 import Table from '../component/table/Table';
 import AddForm from '../component/addform/AddForm';
+import Footer from '../component/footer/footer';
 
 export default class Home extends Component {
   render(){
@@ -13,6 +14,7 @@ export default class Home extends Component {
           <Table />
           <AddForm />
         </div>
+        <Footer />
       </>
     )
   }
