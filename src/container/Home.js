@@ -38,10 +38,16 @@ export default class Home extends Component {
         }
       ]
     })
+
+    this.setState({
+      makanan: '',
+      deskripsi: '',
+      harga: 0,
+      id: 0
+    })
   }
 
   render(){
-    console.log(this.state.makanans);
     return (
       < >
         <Navbar />
