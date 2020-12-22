@@ -1,21 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: 'Frank Ruhl Libre', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-family: 14px;
-  background-color: #242423;
-  color: #fff;
 }
 body::-webkit-scrollbar {
   width: 10px;
-  background: #242423;
 }
 body::-webkit-scrollbar-thumb {
-  background: #4c545e;
+  background: #bdbdbd;
 }
 #home-page {
   margin: 50px 100px;

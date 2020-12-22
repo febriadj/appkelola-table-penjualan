@@ -18,6 +18,7 @@ const AddForm = ({makanan, harga, deskripsi, handleChange, handleSubmit}) => {
             value={harga}
             onChange={(event) => handleChange(event) }
           />
+          <button id="submit" type="submit">Add Data</button>
         </span>
         <span>
           <label>Deskripsi</label>
@@ -27,7 +28,6 @@ const AddForm = ({makanan, harga, deskripsi, handleChange, handleSubmit}) => {
           onChange={(event) => handleChange(event) }>
           </textarea>
         </span>
-        <button id="submit" type="submit"></button>
       </form>
     </div>
   )

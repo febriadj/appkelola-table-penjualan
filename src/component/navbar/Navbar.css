@@ -3,7 +3,9 @@
   height: 60px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+  background: #f1f2f8;
+  border-bottom: 1px solid #bdbdbd;
 }
 #navbar-logo {
   margin: 0 0 0 100px;
@@ -13,6 +15,6 @@
 }
 #navbar-menu a {
   margin: 0 0 0 20px;
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }

@@ -1,13 +1,28 @@
 table {
   width: 100%;
 }
+#header {
+  background: #f1f2f8;
+}
 td {
   padding: 10px;
-  border: 1px solid #4c545e;
+  border: 1px solid #202020;
 }
-thead {
-  background: #35393f;
+tbody td:nth-child(2), tbody td:nth-child(3){
+  text-transform: capitalize;
+}
+.button-action {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
 }
 .edit {
-  background: #e5ff00;
+  background: #d3940b;
+  margin: 0 5px 0 0;
+}
+.hapus {
+  background: #880000;
 }

@@ -1,12 +1,12 @@
 import React from 'react';
 import './Table.css';
 
-const Table = ({makanans, editData}) => {
+const Table = ({makanans, editData, hapusData}) => {
   return (
     <div id="table">
       <div id="wrap">
         <table>
-          <tr>
+          <tr id="header">
             <td>No</td>
             <td>Makanan</td>
             <td>Deskripsi</td>
@@ -22,7 +22,8 @@ const Table = ({makanans, editData}) => {
                   <td>{makanan.deskripsi}</td>
                   <td>{makanan.harga}</td>
                   <td>
-                    <button className="edit" onClick={() => editData(makanan.id)}>Edit</button>
+                    <button className="button-action edit" onClick={() => editData(makanan.id)}>Edit</button>
+                    <button className="button-action hapus" onClick={() => hapusData(makanan.id)}>Hapus</button>
                   </td>
                 </tr>
               )

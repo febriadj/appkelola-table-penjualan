@@ -4,7 +4,7 @@
   display: flex;
 }
 form {
-  border: 1px solid #4c545e;
+  border: 1px solid #202020;
   padding: 20px 20px 40px 20px;
   display: flex;
 }
@@ -18,11 +18,10 @@ span {
 }
 .input-line {
   outline: none;
-  border: 1px solid #4c545e;
+  border: 1px solid #202020;
   background: transparent;
   padding: 15px;
-  color: #fff;
-  font-family: 'Frank Ruhl Libre', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 textarea {
   min-width: 200px;
@@ -31,5 +30,11 @@ textarea {
   max-height: 110px;
 }
 #submit {
-  width: 100px;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  background: #202020;
+  margin: 40px 0 0 0;
+  color: #fff;
+  cursor: pointer;
 }

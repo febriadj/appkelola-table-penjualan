@@ -50,7 +50,7 @@ export default class Home extends Component {
           makanans: [
             ...makananTidakDipilih,
             {
-              id: this.state.makanans.length + 1,
+              id: this.state.id,
               makanan: this.state.makanan,
               deskripsi: this.state.deskripsi,
               harga: this.state.harga
@@ -81,6 +81,18 @@ export default class Home extends Component {
       id: makananDipilih[0].id
     })
   }
+
+  hapusData = (id) => {
+    const makananBaru = this.state.makanans
+        .filter(makanan => makanan.id !== id)
+        .map(filterMakanan => {
+          return filterMakanan;
+        });
+
+    this.setState({
+      makanans: makananBaru
+    })
+  }
   
   render(){
     return (
@@ -90,6 +102,7 @@ export default class Home extends Component {
           <Table 
             makanans={this.state.makanans}
             editData={this.editData}
+            hapusData={this.hapusData}
           />
           <AddForm 
             {...this.state} 
