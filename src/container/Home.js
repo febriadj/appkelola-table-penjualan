@@ -27,18 +27,38 @@ export default class Home extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    this.setState({
-      makanans: [
-        ...this.state.makanans,
-        {
-          id: this.state.id.length + 1,
-          makanan: this.state.makanan,
-          deskripsi: this.state.deskripsi,
-          harga: this.state.harga
-        }
-      ]
-    })
+    if ( this.state.id === "" ){
+      this.setState({
+        makanans: [
+          ...this.state.makanans,
+          {
+            id: this.state.makanans.length + 1,
+            makanan: this.state.makanan,
+            deskripsi: this.state.deskripsi,
+            harga: this.state.harga
+          }
+        ]
+      })
+    } else {
+      const makananTidakDipilih = this.state.makanans
+        .filter(makanan => makanan.id !== this.state.id)
+        .map(filterMakanan => {
+          return filterMakanan;
+        });
 
+        this.setState({
+          makanans: [
+            ...makananTidakDipilih,
+            {
+              id: this.state.makanans.length + 1,
+              makanan: this.state.makanan,
+              deskripsi: this.state.deskripsi,
+              harga: this.state.harga
+            }
+          ]
+        })
+    }
+    
     this.setState({
       makanan: '',
       deskripsi: '',
@@ -48,7 +68,18 @@ export default class Home extends Component {
   }
 
   editData = (id) => {
-    console.log('ID : ', id);
+    const makananDipilih = this.state.makanans
+        .filter(makanan => makanan.id === id)
+        .map(filterMakanan => {
+          return filterMakanan;
+        });
+
+    this.setState({
+      makanan: makananDipilih[0].makanan,
+      deskripsi: makananDipilih[0].deskripsi,
+      harga: makananDipilih[0].harga,
+      id: makananDipilih[0].id
+    })
   }
   
   render(){
