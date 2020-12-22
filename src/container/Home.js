@@ -27,7 +27,7 @@ export default class Home extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log(`Data : ${this.state}`);
+    console.log('Data : ', this.state);
   }
 
   render(){

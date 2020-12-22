@@ -1,7 +1,7 @@
 import React from 'react';
 import './AddForm.css';
 
-const AddForm = ({nama, harga, deskripsi, handleChange, handleSubmit}) => {
+const AddForm = ({makanan, harga, deskripsi, handleChange, handleSubmit}) => {
   return (
     <div id="add-form">
       <form onSubmit={handleSubmit}>
@@ -9,7 +9,7 @@ const AddForm = ({nama, harga, deskripsi, handleChange, handleSubmit}) => {
           <label>Nama Makanan</label>
           <input name="makanan"
             type="text" id="makanan" className="input-line" placeholder="Nama Makanan"
-            value={nama}
+            value={makanan}
             onChange={(event) => handleChange(event) }
           />
           <label>Harga</label>
