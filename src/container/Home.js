@@ -27,15 +27,26 @@ export default class Home extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log('Data : ', this.state);
+    this.setState({
+      makanans: [
+        ...this.state.makanans,
+        {
+          id: this.state.id,
+          makanan: this.state.makanan,
+          deskripsi: this.state.deskripsi,
+          harga: this.state.harga
+        }
+      ]
+    })
   }
 
   render(){
+    console.log(this.state.makanans);
     return (
       < >
         <Navbar />
         <div id="home-page">
-          <Table />
+          <Table makanans={this.state.makanans}/>
           <AddForm 
           {...this.state} 
           handleChange = {this.handleChange}
