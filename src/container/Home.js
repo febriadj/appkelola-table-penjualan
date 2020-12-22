@@ -14,7 +14,7 @@ export default class Home extends Component {
       makanan: '',
       deskripsi: '',
       harga: 0,
-      id: 0
+      id: ''
     }
   }
 
@@ -31,7 +31,7 @@ export default class Home extends Component {
       makanans: [
         ...this.state.makanans,
         {
-          id: this.state.id,
+          id: this.state.id.length + 1,
           makanan: this.state.makanan,
           deskripsi: this.state.deskripsi,
           harga: this.state.harga
@@ -43,20 +43,27 @@ export default class Home extends Component {
       makanan: '',
       deskripsi: '',
       harga: 0,
-      id: 0
+      id: ''
     })
   }
 
+  editData = (id) => {
+    console.log('ID : ', id);
+  }
+  
   render(){
     return (
       < >
         <Navbar />
         <div id="home-page">
-          <Table makanans={this.state.makanans}/>
+          <Table 
+            makanans={this.state.makanans}
+            editData={this.editData}
+          />
           <AddForm 
-          {...this.state} 
-          handleChange = {this.handleChange}
-          handleSubmit = {this.handleSubmit}
+            {...this.state} 
+            handleChange = {this.handleChange}
+            handleSubmit = {this.handleSubmit}
           />
         </div>
         <Footer />

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Table.css';
 
-const Table = ({makanans}) => {
+const Table = ({makanans, editData}) => {
   return (
     <div id="table">
       <div id="wrap">
@@ -16,12 +16,14 @@ const Table = ({makanans}) => {
           <tbody>
             {makanans.map((makanan, index) => {
               return (
-                <tr>
+                <tr key={index}>
                   <td>{index + 1}</td>
                   <td>{makanan.makanan}</td>
                   <td>{makanan.deskripsi}</td>
                   <td>{makanan.harga}</td>
-                  <td>Null</td>
+                  <td>
+                    <button className="edit" onClick={() => editData(makanan.id)}>Edit</button>
+                  </td>
                 </tr>
               )
             })}
