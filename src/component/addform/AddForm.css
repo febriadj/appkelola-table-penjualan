@@ -30,3 +30,6 @@ textarea {
   min-height: 110px;
   max-height: 110px;
 }
+#submit {
+  width: 100px;
+}

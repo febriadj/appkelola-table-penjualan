@@ -1,20 +1,33 @@
 import React from 'react';
 import './AddForm.css';
 
-const AddForm = () => {
+const AddForm = ({nama, harga, deskripsi, handleChange, handleSubmit}) => {
   return (
     <div id="add-form">
-      <form>
+      <form onSubmit={handleSubmit}>
         <span>
           <label>Nama Makanan</label>
-          <input type="text" id="makanan" className="input-line" placeholder="Nama Makanan" />
+          <input name="makanan"
+            type="text" id="makanan" className="input-line" placeholder="Nama Makanan"
+            value={nama}
+            onChange={(event) => handleChange(event) }
+          />
           <label>Harga</label>
-          <input type="number" id="harga" className="input-line" placeholder="Harga" />
+          <input name="harga"
+            type="number" id="harga" className="input-line" placeholder="Harga" 
+            value={harga}
+            onChange={(event) => handleChange(event) }
+          />
         </span>
         <span>
           <label>Deskripsi</label>
-          <textarea id="deskripsi" className="input-line" placeholder="Deskripsi"></textarea>
+          <textarea name="deskripsi"
+          id="deskripsi" className="input-line" placeholder="Deskripsi" 
+          value={deskripsi} 
+          onChange={(event) => handleChange(event) }>
+          </textarea>
         </span>
+        <button id="submit" type="submit"></button>
       </form>
     </div>
   )
